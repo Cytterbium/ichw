@@ -103,6 +103,9 @@
 按照发展顺序，是
 >先有原码（直观），再有反码（计算机化），最后补码（优化）
 
+百度链接[补码](https://baike.baidu.com/item/补码/6854613?fr=aladdin)
+CSDN博客[补码详解] (https://blog.csdn.net/qq_33391629/article/details/79738814)
+
 
 
 
