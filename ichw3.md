@@ -51,5 +51,8 @@
 
   如今，更复杂的算法被研究出来运用到Cache中，尽管一个好算法的研发是很耗费时力的，但是为了提高系统运算能力和效率，这都是值得的。Cache刚出现时结构简单，原理易懂，发展到如今已具有多级结构、读取数据策略十分的复杂，这一切都是计算机发展的结果，是人类智慧的体现。
 
-  the end
+百度百科[Cache 存储器](https://baike.baidu.com/item/CACHE存储器/12789048?fr=aladdin)
 
+灵感---[有趣的比喻](https://blog.csdn.net/strongwangjiawei/article/details/8205358)
+
+[wiki](http://www.baike.com/wiki/缓存&prd=so_1_doc)
