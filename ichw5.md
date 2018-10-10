@@ -35,9 +35,14 @@
 　　
 第三次握手：客户端向服务器发送连接建立的确认包ACK（ack=k+1），回应服务器的SYN（syn=k）。若服务器收到
     则这一步*客户端确定对方发送、接受正常，自己发送、接收正常，服务器端确定对方发送、接收正常，自己发送、接受正常*
-    然后确认建立连接，开始传输数据。https://blog.csdn.net/zixiaomuwu/article/details/60965466
-    https://blog.csdn.net/xumin330774233/article/details/14448715
+    
+    然后确认建立连接，开始传输数据。
+    
 由上可知三步之后才能完全确认两端收发能力正常。若只进行二次握手，可能会有以下情况：当一个失效的请求包传到服务器端时，服务器误以为此刻客户端在请求连接，于是发出ACK包，假设是二次握手，则此时连接已建立。但此刻若客户端处于closed状态，则不会接受理睬任何数据包，使得服务器端白白等待，造成资源浪费。因此三次握手是有必要的。那四次握手，五次握手则是多余的，因为大于等于三次的握手都只能确认*当前*传输环境稳定（两军问题无解），故采用三次握手。
+
+[各种计算的展示](https://blog.csdn.net/Leichelle/article/details/8217022)CSDN介绍
+
+[三次握手](https://blog.csdn.net/zixiaomuwu/article/details/60965466)CSDN介绍
 
 ```
 有哪些恶意软件, 如何防范恶意软件？
@@ -59,3 +64,8 @@
 - 不随便暴露自己的 email、生日、手机等重要信息
 
 - 不以 Administrator 权限操作计算机
+
+——以上方法摘自[计概课件HTML5](https://caodg.github.io/ic/slides/05.network/#1)，Page75
+
+还有一篇详细讲述如何针对七个攻击（虚假无线接入点、窃取cookie、文件名欺骗、绝对和相对路径、Hosts文件重定向、Waterhole Attacks、诱导及跳转）途径进行防范的科普文章——[盘点黑客攻击途径：最常用的7个策略及简单的防护方法](https://www.csdn.net/article/2013-10-08/2817116-7-top-tactics-of-hack-attacks)
+英版原文[7 top tactics of hack attacks](https://www.pcworld.com/article/2052601/7-top-tactics-of-hack-attacks.html)
